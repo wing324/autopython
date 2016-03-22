@@ -33,6 +33,7 @@ def parser_options():
 	parser.add_argument("-v","--verbose",dest="verbose",default=True,help="Print user friendly messages")
 	return parser.parse_args()
 # 定义rename_database的参数选项
+# define rename_database.py options
 
 
 def verbose(message):
@@ -49,6 +50,7 @@ def conn_mysql():
 	conn = MySQLdb.connect(user=args.user,host=args.host,port=args.port,unix_socket=args.socket,passwd=args.password,db=args.old_database,cursorclass=MySQLdb.cursors.DictCursor)
 	return conn
 	# 建立MySQL连接
+	# connect to MySQL
 
 
 def rename_database():
@@ -60,11 +62,13 @@ def rename_database():
 	row_affected=cur.rowcount
 	results = cur.fetchall()
 	# 获取需要被重命名数据库中的所有表名称
+	# get all the table names required to be renamed
 	verbose("rename database ......")
 	for i in xrange(0,len(results)):
 		table = results[i]['table_name']
 		command = cur.execute("RENAME TABLE %s.%s TO %s.%s"%(olddatabase,table,newdatabase,table))
 		# 循环获取每个表名称,对每个表重命名其数据库名称
+		# search each table name to rename
 
 
 args = parser_options()
@@ -80,6 +84,7 @@ try:
 			verbose("Create new database......")
 			command2 = cur.execute("CREATE DATABASE %s"%(args.new_database))
 		# 创建新的数据库
+		# create new database
 	else:
 		pass
 	rename_database()
@@ -93,6 +98,7 @@ try:
 			verbose("Drop old database......")
 			command4 = cur.execute("DROP DATABASE %s"%(args.old_database))
 		# 删除旧的数据库
+		# drop old database
 	else:
 		pass
 	verbose("Complete!")
