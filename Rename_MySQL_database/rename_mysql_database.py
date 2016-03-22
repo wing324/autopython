@@ -28,7 +28,6 @@ def parser_options():
 	parser.add_argument("-p","--password",dest="password",default='',help="MySQL password")
 	parser.add_argument("-P","--port",dest="port",type=int,default=3306,help="TCP/IP port")
 	parser.add_argument("-S","--socket",dest="socket",default="/var/run/mysqld/mysql.sock",help="MySQL socket file. Only applies when host is localhost")
-	parser.add_argument("-t","--table",dest="table_name",help="Rename a part of table name by spacifying the table name,you can use ',' to seperate the multiple table name")
 	parser.add_argument("-u","--user",dest="user",required=True,help="MySQL user")
 	parser.add_argument("-v","--verbose",dest="verbose",default=True,help="Print user friendly messages")
 	return parser.parse_args()
