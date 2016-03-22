@@ -39,11 +39,15 @@ def random_str(randomlength):
     for i in range(randomlength):
         str+=chars[random.randint(0, length)]
     return str
+# 定义随机字符串
+# define random string
 
 
 def random_num():
 	no = random.randint(1,100)
 	return no
+# 定义随机数字
+# define random number
 
 try:
 	conn=MySQLdb.connect(host='localhost',user='root',passwd='',unix_socket='/data/mysql/mysqldata3306/sock/mysql.sock',db='test',charset='utf8')
@@ -59,6 +63,8 @@ try:
 		data = (i,var,num)
 		values.append(data)
 	cur.executemany("insert into t1(id,name,score) values(%s,%s,%s)",values)
+	# 插入数据
+	# insert rows
 	conn.commit()
 	cur.close()
 	conn.close()
