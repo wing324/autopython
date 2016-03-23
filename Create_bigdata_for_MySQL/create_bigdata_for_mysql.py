@@ -19,7 +19,7 @@ Email : wing324@126.com
 
 '''
 [USAGE]
-1. Change the information for connect to MySQL :  conn=MySQLdb.connect(host='localhost',user='root',passwd='',unix_socket='/data/mysql/mysqldata3306/sock/mysql.sock',db='test',charset='utf8').
+1. Change the information for connect to MySQL :  conn=MySQLdb.connect(host='localhost',user='root',passwd='',port=3306,unix_socket='/data/mysql/mysqldata3306/sock/mysql.sock',db='test',charset='utf8').
 2. Change the strunct of table :  cur.executemany("insert into t1(id,name,score) values(%s,%s,%s)",values).
 3. the 'i' is for the number of auto_increment.
 4. The 'random_str()' function produce random string(the length is randomlength),the 'random_num()' function produce random number(the range default from 1 to 100, you can change it in 'random.randint(1,100)').
@@ -50,7 +50,7 @@ def random_num():
 # define random number
 
 try:
-	conn=MySQLdb.connect(host='localhost',user='root',passwd='',unix_socket='/data/mysql/mysqldata3306/sock/mysql.sock',db='test',charset='utf8')
+	conn=MySQLdb.connect(host='localhost',user='root',passwd='',port=3306,unix_socket='/data/mysql/mysqldata3306/sock/mysql.sock',db='test',charset='utf8')
 	cur=conn.cursor()
 	lines = int(raw_input('please input the number you want to insert : '))
 	start = int(raw_input('please input the min value of auto_increment : '))
