@@ -36,7 +36,7 @@ def random_str(randomlength):
     chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789'
     length = len(chars) - 1
     rdm = random.Random()
-    for i in range(randomlength):
+    for i in xrange(randomlength):
         str+=chars[random.randint(0, length)]
     return str
 # 定义随机字符串
@@ -57,7 +57,7 @@ try:
 	end = start + lines
 	randomlength = int(raw_input('please input the length of random string : '))
 	values = []
-	for i in range(start,end):
+	for i in xrange(start,end):
 		var=random_str(randomlength)
 		num = random_num()
 		data = (i,var,num)
