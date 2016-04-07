@@ -1,1 +1,28 @@
+#! /usr/bin/env python
+# coding:utf-8
 
+
+'''
+[INFORMATION]
+Create Big Data For MySQL
+AUTHOR : Wing
+GitHub : https://github.com/wing324
+Email : wing324@126.com
+'''
+
+import imp
+import os
+
+def check_python_modules():
+# 检查MySQLdb模块是否存在
+	try:
+		imp.find_module('MySQLdb')
+		found = 1
+	except ImportError:
+		found = 0 
+	if found == 0:
+		os.system('yum install -y MySQL-python')
+		# 如果MySQLdb不存在,则使用yum安装MySQL-python
+	else:
+		pass
+		# 如果MySLQdb存在,则什么都不用做
