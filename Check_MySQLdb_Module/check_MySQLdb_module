@@ -30,4 +30,4 @@ def check_mysqldb_modules():
 		# 如果MySLQdb存在,则什么都不用做
 		# If MySLQdb exists, there's nothing to do
 		
-check_mysql_modules()
+check_mysqldb_modules()
