@@ -13,7 +13,7 @@ Email : wing324@126.com
 import imp
 import os
 
-def check_python_modules():
+def check_mysqldb_modules():
 # 检查MySQLdb模块是否存在
 # check MySQLdb module exists
 	try:
@@ -29,3 +29,5 @@ def check_python_modules():
 		pass
 		# 如果MySLQdb存在,则什么都不用做
 		# If MySLQdb exists, there's nothing to do
+		
+check_mysql_modules()
