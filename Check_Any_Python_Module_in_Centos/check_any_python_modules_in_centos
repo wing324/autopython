@@ -1,0 +1,34 @@
+#! /usr/bin/env python
+# coding:utf-8
+
+
+'''
+[INFORMATION]
+Check Any Python Module In CentOS
+AUTHOR : Wing
+GitHub : https://github.com/wing324
+Email : wing324@126.com
+'''
+
+import imp
+import os
+
+def check_any_python_modules_in_centos():
+# 检查Python模块是否存在Centos系统里
+# check any Python module exists in CentOS
+	try:
+		mdl = raw_input('Please input Python module name what you want to check:')
+		imp.find_module(mdl)
+		found = 1
+	except ImportError:
+		found = 0 
+	if found == 0:
+		print 'Unfortunately,%s is not exists in CentOS！'%mdl
+		# 如果Python模块不存在,输出失败信息
+		# If Python module doesn`t exist, then print failure message
+	else:
+		print 'Congratulations!%s is exists in CentOS！'%mdl
+		# 如果Python模块存在,输出成功信息
+		# If Python module exists,then print successful message
+		
+check_any_python_modules_in_centos()
