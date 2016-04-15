@@ -5,14 +5,11 @@ Automatic job by Python
 Note:  
 注意：  
 
-**If not special specified:**  
-**在没有特殊说明的情况下：**  
-
-**OS & Software Version**  
-**操作系统&软件版本信息如下：**   
->> CentOS:6.5  
->> MySQL:5.6.28  
->> Python:2.6.6  
+If not special specified,OS & Software Version:  
+在没有特殊说明的情况下,操作系统&软件版本信息如下：     
+> CentOS:6.5  
+> MySQL:5.6.28  
+> Python:2.6.6  
 
 1. Rename_MySQL_database : MySQL数据库重命名  
 2. Install_MySQL_with_rpm : 一键安装MySQL数据库(RPM方式)  
