@@ -20,4 +20,4 @@ If not special specified,OS & Software Version:
 6. Rename_MySQL_database : MySQL数据库重命名  
 7. Rename_Yesterday_Log_Add_Date : 重命名昨天的日志加上日期后缀  
 8. Send_Email_With_Python : 使用Python发送邮件  
-  
+9. Generate_32-bit_password : 生成32位密码
